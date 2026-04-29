@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: beauty-journey-backend
+    env: node
+    plan: free
+    repo: https://github.com/yourusername/beauty-journey-app.git
+    region: oregon
+    buildCommand: cd backend && npm ci
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DB_PATH
+        value: ./data/beauty_journey.db
+      - key: JWT_SECRET
+        generateValue: true
+      - key: UPLOAD_DIR
+        value: ./uploads
+      - key: MAX_FILE_SIZE
+        value: 5242880
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/backend/data
+      sizeGB: 1
