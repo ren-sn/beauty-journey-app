@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Sans MS", "Marker Felt", "Segoe Script", "HG正楷書體-PRO", "Mona Sans", cursive;
+  background: linear-gradient(135deg, #FFF5F5 0%, #FFE7F0 50%, #F3E8FF 100%);
+  min-height: 100vh;
+}
+
+.cute-font {
+  font-family: 'Noto Serif SC', 'KaiTi', serif;
+  font-weight: 600;
+}
+
+.handwritten {
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #FF69B4 0%, #C084FC 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pink-shadow {
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.15);
+}
+
+.pink-glow {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+.checkin-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  border: 2px solid rgba(255, 105, 180, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 105, 180, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #FF69B4, #C084FC);
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
